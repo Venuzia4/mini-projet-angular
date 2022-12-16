@@ -1,0 +1,57 @@
+ .btn {
+  padding: 12px;
+  width:  80%;
+  border-radius: 5px;
+  display:flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: medium;
+
+}
+
+.secondary{
+  background-color:black ;
+  color: white;
+
+}
+
+.primary {
+  background-color:#007AFF;
+  color: white;
+
+}
+
+img{
+  width: 16px;
+  height: 16px;
+
+}
+
+@media only screen and (min-width: 900px) {
+  .btn {
+    padding: 12px;
+    width:  50%;
+    padding: 10px;
+
+  }
+
+}
+
+@media only screen and (min-width: 800px) {
+  .btn {
+    padding: 12px;
+
+    padding: 10px;
+  }
+
+}
+
+@media screen and  (min-width: 1024px) {
+.btn{
+  width: 80%;
+  margin-right: 6vh;
+
+}
+
+}

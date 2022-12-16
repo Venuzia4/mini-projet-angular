@@ -1,1 +1,70 @@
-<p>register works!</p>
+<h2>Register</h2>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <label for="firstname">Firstname * </label>
+  <input
+    class="register"
+    placeholder="Enter your firstname"
+    name="firstname"
+    type="text"
+    formControlName="firstname"
+  />
+
+  <div
+    class="validator-text"
+    *ngIf="firstname && firstname.invalid && firstname.touched"
+  >
+    this field is required
+  </div>
+
+  <label for="lastname">Lastname * </label>
+  <input
+    class="register"
+    placeholder="Enter your lastname"
+    name="lastname"
+    type="text"
+    formControlName="lastname"
+  />
+
+  <div
+    class="validator-text"
+    *ngIf="lastname && lastname.invalid && lastname.touched"
+  >
+    this field is required
+  </div>
+
+  <label for="email">Email *</label>
+  <input
+    class="register"
+    placeholder="johndo@test.com"
+    name="email"
+    type="email"
+    id="email"
+    formControlName="email"
+  />
+
+  <div
+    class="validator-text"
+    *ngIf="email && email.invalid && (email.dirty || email.touched)"
+  >
+    Enter a valid Email.
+  </div>
+
+  <label for="email">Password *</label>
+  <input
+    class="register"
+    placeholder="Enter your Password"
+    name="password"
+    type="password"
+    id="password"
+    formControlName="password"
+  />
+
+  <div
+    class="validator-text"
+    *ngIf="password && password.invalid && (password.dirty || password.touched)"
+  >
+    Enter a valid password.
+  </div>
+  <app-button class="button" className="primary">Submit</app-button>
+</form>

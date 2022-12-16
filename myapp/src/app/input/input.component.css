@@ -1,0 +1,70 @@
+.input{
+  border: 1px solid #ddd;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 5px;
+  background: color #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10px;
+
+}
+span{
+  position:relative;
+  right: -10%;
+  bottom: -10rem;
+  color: black;
+}
+label {
+  margin-left: 1rem;
+  color: gray;
+}
+
+
+@media only screen and (max-width:900px)
+{
+
+  .input{
+    width: 40vh;
+
+  }
+  span{
+    top: 2em;
+    right: 10%;
+  }
+
+}
+
+
+@media screen and  (min-width: 1024px) {
+
+  label {
+    display: none;
+    }
+  }span{
+    top:2.3em;
+    right:-84%;
+  }.input{
+    width: 40vh;
+    margin-right: 4vh;
+  }
+
+
+
+
+
+  @media only screen and (max-width:1224px)
+  {
+    span{
+      top:2.2em;
+      right: -54%;
+    }
+
+
+  }
+
+
+

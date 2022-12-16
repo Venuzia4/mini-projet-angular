@@ -1,0 +1,13 @@
+.banner{
+
+  width:100px;
+  height: 150%;
+  line-height:150px;
+  background-color: #1E1F25;
+}
+.header{
+  width: 100%;
+  background-color: #1E1F25;
+  height: 10%;
+}
+

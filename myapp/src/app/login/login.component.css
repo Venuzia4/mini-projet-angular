@@ -1,0 +1,47 @@
+
+.forgot-password {
+  font-size: small;
+  color: #007aff;
+  padding: 3px;
+  text-decoration: none;
+}
+
+h2 {
+  right: 30px;
+  margin-left: 0rem;
+  font-size: large;
+  padding-top: 5vh;
+}
+
+
+
+.slide {
+  display: flex;
+  justify-content: space-around;
+
+}
+.line {
+  border: 1px solid #cccccccc;
+
+  margin-top: 30px;
+}
+.account {
+  display: flex;
+  justify-content: space-around;
+  font-size: small;
+
+}
+
+.span {
+  margin: 5px;
+  color: #007aff;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+  .line {
+    margin-right: 2vh;
+  }
+}
+
+

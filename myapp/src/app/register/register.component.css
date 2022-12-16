@@ -1,0 +1,100 @@
+.register {
+  border: 1px solid #ddd;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+h2{
+  padding-top: 20px;
+  text-align: center;
+  font-size: larger;
+
+}
+
+.validator-text{
+  color:red;
+  margin: 2px;
+  font-size:small;
+  margin-left: 28px;
+
+}
+
+label {
+  margin-left: 3.5rem;
+  color: gray;
+
+
+}
+
+
+@media only screen and (max-width:784px)
+{
+
+}
+@media only screen and (min-width:900px)
+{
+  .register{
+    width: 40vh;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+
+  }label{
+    margin-right: 60px;
+
+
+  }.button{
+
+    padding: 12px;
+    width:  100%;
+    display: flex;
+    justify-content: center;
+
+  }
+
+
+}
+
+
+
+
+@media only screen and (max-width:767px)
+{
+label {
+display: none;
+}
+
+
+}
+@media screen and  (max-width: 1024px) {
+
+
+}.button{
+
+  padding: 12px;
+  width:  80%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+}
+label{
+  margin-left: 2vh;
+
+}.register{
+  margin-right: 4vh;
+}
+
+
+
+
+
+
