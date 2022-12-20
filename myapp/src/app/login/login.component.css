@@ -1,4 +1,3 @@
-
 .forgot-password {
   font-size: small;
   color: #007aff;
@@ -8,28 +7,27 @@
 
 h2 {
   right: 30px;
-  margin-left: 0rem;
+  margin-left: 3rem;
   font-size: large;
   padding-top: 5vh;
 }
 
-
-
 .slide {
   display: flex;
   justify-content: space-around;
-
+  font-size: small;
 }
 .line {
   border: 1px solid #cccccccc;
-
   margin-top: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .account {
   display: flex;
   justify-content: space-around;
   font-size: small;
-
+  margin-bottom: 28%;
 }
 
 .span {
@@ -38,10 +36,15 @@ h2 {
   cursor: pointer;
 }
 
+
+
+
 @media only screen and (min-width: 1024px) {
-  .line {
-    margin-right: 2vh;
+  /* .line {
+  } */
+  h2 {
+    right: 30px;
+    margin-left: 2rem;
+ ;
   }
 }
-
-

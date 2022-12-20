@@ -8,11 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  color:ThemePalette='primary';
+  color: ThemePalette = 'primary';
 
   logo: any;
-  isPassword:boolean=true;
-  constructor(private router:Router) { }
+  isPassword: boolean = true;
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -20,18 +20,18 @@ export class LoginComponent implements OnInit {
   envoyer() {
     console.log('envoyer')
 
-    }
+  }
 
-    handleClick(){
-      this.router.navigate(['register']);
-    }
+  handleClick() {
+    this.router.navigate(['register']);
+  }
 
 
-    redirectDashboard(){
-      this.router.navigate(['dashboard']);
-    }
-    validateLogin(username: string) {
-      console.log(username)
-      }
+  redirectDashboard() {
+    this.router.navigate(['dashboard']);
+  }
+  validateLogin(username: string) {
+    console.log(username)
+  }
 
 }

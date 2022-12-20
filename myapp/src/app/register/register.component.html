@@ -7,12 +7,12 @@
     placeholder="Enter your firstname"
     name="firstname"
     type="text"
-    formControlName="firstname"
+    formControlName="firstName"
   />
 
   <div
     class="validator-text"
-    *ngIf="firstname && firstname.invalid && firstname.touched"
+    *ngIf="firstName && firstName.invalid && firstName.touched"
   >
     this field is required
   </div>
@@ -39,7 +39,6 @@
     placeholder="johndo@test.com"
     name="email"
     type="email"
-    id="email"
     formControlName="email"
   />
 
@@ -50,13 +49,12 @@
     Enter a valid Email.
   </div>
 
-  <label for="email">Password *</label>
+  <label for="password">Password *</label>
   <input
     class="register"
     placeholder="Enter your Password"
     name="password"
     type="password"
-    id="password"
     formControlName="password"
   />
 
@@ -66,5 +64,91 @@
   >
     Enter a valid password.
   </div>
+  <label for="password">Confirm your password *</label>
+  <input
+    class="register"
+    placeholder="confirm your password"
+    name="confirmPassword"
+    type="password"
+    formControlName="confirmPassword"
+  />
+  <span
+  *ngIf="f['confirmPassword'].getError('invalid') != null"
+  class="validator-text"
+  >Confirm your password</span
+>
+<span
+  *ngIf="f['confirmPassword'].getError('Mustmatch') != null"
+  class="validator-text"
+  >Please enter same password</span
+>
+
+  <div formArrayName="phones">
+    <div
+      *ngFor="let phone of phones.controls; let i = index; let first = first"
+      [formGroupName]="i"
+    >
+      <select formControlName="phonePrefix" required>
+        <option selected hidden value="">code</option>
+        <option value="66">+33</option>
+        <option value="66">+99</option>
+        <option value="66">+90</option>
+        <option value="66">+66</option>
+      </select>
+      <input
+        class="phone"
+        type="phone"
+        name="phone"
+        formControlName="phoneNumber"
+        placeholder="Enter your phone number"
+      />
+
+      <span
+        (click)="deletePhone(i)"
+        class="remove-btn"
+        className="tertiary"
+        *ngIf="!first"
+        >x</span
+      >
+      <div
+        class="validator-text"
+        *ngIf="getPhonePrefix(i)?.touched && getPhonePrefix(i)?.errors"
+      >
+        selected prefix phone
+      </div>
+      <div
+        class="validator-text"
+        *ngIf="getPhoneNumber(i)?.touched && getPhoneNumber(i)?.errors"
+      >
+        Enter valid phone number
+      </div>
+    </div>
+  </div>
+
+  <app-button
+    *ngIf="phones.length < 2"
+    (click)="addPhone()"
+    class="btn"
+    className="tertiary"
+    >+ Add Phone number</app-button
+  >
+
+  <p class="text" *ngIf="phones?.length == 2">
+    You can add only 2 number phones
+  </p>
+
+  <p class="box-checkbox">
+    <input
+      class="checkbox"
+      type="checkbox"
+      name="terms"
+      formControlName="terms"
+    />
+    By creating an account you agree to our <span>Terms & Privacy</span>.
+  </p>
+  <div class="validator-text" *ngIf="terms && terms.invalid && terms.touched">
+    You must agree to the terms in order to register
+  </div>
+
   <app-button class="button" className="primary">Submit</app-button>
 </form>

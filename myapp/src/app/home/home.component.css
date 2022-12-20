@@ -5,10 +5,16 @@
 
 .container {
   display: flex;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
 }
-.picture {
 
+.box{
+  box-sizing: border-box;
+}
+.picture {
+  width: 100%;
   border-top-left-radius: 6px 6px;
   border-bottom-left-radius: 6px 6px;
 }
@@ -20,15 +26,15 @@
   order: 1;
 }
 .pic {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
 }
 
 @media only screen and (min-width: 900px) {
   .desktop {
     display: flex;
     justify-content: space-between;
-
     align-content: center;
   }
   .picture {
@@ -40,7 +46,7 @@
 
   .icon-pic {
     order: 0;
-    margin: 0;
+    margin-left:26px;
   }
 }
 
@@ -55,7 +61,7 @@
 }
 
 @media screen and (min-width: 900px) {
- .picture {
+  .picture {
     width: 34rem;
     height: 50rem;
   }
@@ -63,8 +69,11 @@
 
 @media only screen and (min-width: 1024px) {
   .picture {
+    width: 100%;
+    height: 100%;
+/*
     width: 70rem;
-    height: 70rem;
+    height: 70rem; */
   }
 }
 @media only screen and (min-width: 1224px) {

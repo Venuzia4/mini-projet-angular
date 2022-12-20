@@ -1,4 +1,4 @@
-import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -9,27 +9,27 @@ export class InputComponent implements OnInit {
 
 
   hide = true;
-  @Input() isPassword!:boolean;
+  @Input() isPassword!: boolean;
   @Input() label!: string;
   @Input() placeholder!: string;
   @Input() type: string = 'text';
-  @Output() value:EventEmitter<string> = new EventEmitter<string>();
+  @Output() value: EventEmitter<string> = new EventEmitter<string>();
   @Output() inputEmitter: EventEmitter<string> = new EventEmitter<string>();
 
-  emitInput(input:string) {
+  emitInput(input: string) {
     console.log('click ' + input)
     this.inputEmitter.emit(input);
   }
 
   constructor() {
-    this.label="login";
-   }
+    this.label = "login";
+  }
 
-   ngOnInit(): void {
-      this.isPassword = this.type == "password";
-   }
+  ngOnInit(): void {
+    this.isPassword = this.type == "password";
+  }
 
-   toggleType() {
+  toggleType() {
     this.hide = !this.hide;
     this.type = (this.type == "password") ? "text" : "password";
   }

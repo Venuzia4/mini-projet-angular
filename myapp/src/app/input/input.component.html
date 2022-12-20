@@ -1,18 +1,24 @@
 <link
-href="https://fonts.googleapis.com/icon?family=Material+Icons"
-rel="stylesheet"
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
 />
 
-<label>{{label}}</label>
- <span *ngIf="isPassword" mat-icon-button
-matSuffix
-(click)="toggleType()"
-[attr.aria-label]="'Hide password'"
-[attr.aria-pressed]="hide"
+<label>{{ label }}</label>
+<span
+  *ngIf="isPassword"
+  mat-icon-button
+  matSuffix
+  (click)="toggleType()"
+  [attr.aria-label]="'Hide password'"
+  [attr.aria-pressed]="hide"
 >
-<mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+  <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
 </span>
 
-<input  class="input" [placeholder]="placeholder" [type]="type" #inputRef (change)="value.emit(inputRef.value)">
-
-
+<input
+  class="input"
+  [placeholder]="placeholder"
+  [type]="type"
+  #inputRef
+  (change)="value.emit(inputRef.value)"
+/>
