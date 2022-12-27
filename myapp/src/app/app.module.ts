@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { InputComponent } from './input/input.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FilterPipe } from './filter.pipe';
+import { LoginGuard } from './login.guard';
 
 
 
@@ -41,7 +42,7 @@ import { FilterPipe } from './filter.pipe';
     MatSlideToggleModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
