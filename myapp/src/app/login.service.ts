@@ -20,7 +20,4 @@ public signIn(login:{username:string,password:string}): Observable<User> {
 }
 
 
-  // public signIn(user: {email: string, password: string}): Observable<User> {
-  //   return this.htttpClient.post<User>('https://dummyjson.com/auth/login', user);
-  // }
 }

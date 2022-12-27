@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['register']);
   }
 
-  redirectDashboard() {
+  logIn() {
     this.loginservice.signIn({ username: this.username, password: this.password }).subscribe(response => {
       this.user = response;
       this.router.navigate(['dashboard']);
@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
 
 
   }
+
 
 
 
