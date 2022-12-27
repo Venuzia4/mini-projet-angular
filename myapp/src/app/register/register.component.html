@@ -125,12 +125,12 @@
     </div>
   </div>
 
-  <app-button
+  <span
     *ngIf="phones.length < 2"
     (click)="addPhone()"
-    class="btn"
+    class="add"
     className="tertiary"
-    >+ Add Phone number</app-button
+    >+ Add Phone number</span
   >
 
   <p class="text" *ngIf="phones?.length == 2">

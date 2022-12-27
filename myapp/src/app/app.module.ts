@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import{HttpClientModule} from'@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,9 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { InputComponent } from './input/input.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FilterPipe } from './filter.pipe';
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FooterComponent,
     LoginComponent,
     InputComponent,
-    DashboardComponent
+    DashboardComponent,
+    FilterPipe,
+
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

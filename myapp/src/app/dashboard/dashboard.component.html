@@ -1,5 +1,57 @@
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
 <div class="header">
-  <img class="logo" src="assets/logo-octom.png" />
+  <div class="header-icon">
+  <img class="logo" src="assets/logo-octom.png" alt="logo"/>
+  <div class="notifications">
+    <img class="notif" src="assets/notification.png" alt=""/>
+    <img class="profil" src="assets/profil.png" alt=""/>
+    <img class="ellipse" src="assets/ellipse.png" alt=""/>
+  </div>
+  </div>
+  <div class="messages">
+
+    <app-input
+    type="search"
+    placeholder="search"
+
+  ></app-input>
+  <!-- <div  *ngFor="let c of displayItems | appFilter: searchText">
+    {{c}}
+  </div> -->
+
+  </div>
 </div>
 
-<div class="banner"></div>
+
+<div class="banner">
+<div class="icon-container">
+
+  <a [routerLinkActive]="'active'">
+  <img class="icon" src="assets/dashboard.png" alt="">
+  </a>
+
+  <a id="a" routerLink="" [routerLinkActive]="'active'">
+  <img class="icon" src="assets/activity.png" alt="">
+  </a>
+
+  <a id="a" routerLink="" [routerLinkActive]="'active'">
+  <img class="icon"src="assets/ebooks.png" alt="">
+  </a>
+
+  <a id="a" routerLink="" [routerLinkActive]="'active'">
+    <!-- <span class="material-symbols-outlined">
+      settings
+      </span> -->
+ <img class="icon" src="assets/settings.png" alt="">
+  </a>
+
+  <a id="a" routerLink="" [routerLinkActive]="'active'">
+  <img class="icon" src="assets/messenger.png" alt="">
+  </a>
+
+  <a id="a" routerLink="" [routerLinkActive]="'active'">
+  <img class="icon" src="assets/files.png" />
+  </a>
+</div>
+</div>
+

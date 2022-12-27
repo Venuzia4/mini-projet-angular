@@ -11,17 +11,14 @@
   margin-bottom: 20px;
 }
 
-input.ng-touched.ng-invalid{
+input.ng-touched.ng-invalid {
   border: 2px solid red;
-
 }
-input.ng-touched.ng-valid{
+input.ng-touched.ng-valid {
   border: 2px solid green;
-
 }
 
-
-.remove-btn{
+.remove-btn {
   margin: 2px;
   padding: 2px;
   color: black;
@@ -29,18 +26,18 @@ input.ng-touched.ng-valid{
   position: relative;
   left: -20px;
 }
-.box-checkbox{
+.box-checkbox {
   text-align: center;
   font-size: small;
 }
-span{
+span {
   color: blue;
 }
-p{
+p {
   text-align: center;
 }
 h2 {
-  padding-top: 20px;
+  /* padding-top: 20px; */
   text-align: center;
   font-size: larger;
 }
@@ -59,6 +56,7 @@ select {
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-left: 26px;
+  /* margin-left: 30px; */
 }
 
 .phone {
@@ -68,22 +66,20 @@ select {
   border-radius: 5px;
   width: 51%;
   margin-left: 4px;
-
-
 }
 label {
   margin-left: 3.5rem;
   color: gray;
 }
 
-@media only screen and (max-width: 784px) {
-}
 @media only screen and (min-width: 900px) {
   .register {
-    width: 40vh;
-    height: 50px;
+    width: 60%;
+
+    /*
+       height: 50px;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 10px; */
   }
   label {
     margin-right: 60px;
@@ -95,13 +91,30 @@ label {
     justify-content: center;
   }
 }
+.add {
+  display: flex;
+  justify-content: center;
+}
 
 @media only screen and (max-width: 767px) {
   label {
     display: none;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .phone {
+    width: 40%;
+  }select {
+    width: 20%;
+    margin-left: 74px;
+  }
+  label {
+    margin-left: 70px;
+  }
+  .validator-text {
+    margin-left: 80px;
+  }
+
 }
 .button {
   padding: 12px;
@@ -109,7 +122,4 @@ label {
   display: flex;
   justify-content: center;
   margin: auto;
-}
-label {
-  margin-left: 2vh;
 }

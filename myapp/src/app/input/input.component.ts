@@ -9,12 +9,14 @@ export class InputComponent implements OnInit {
 
 
   hide = true;
+  @Input() search!:string;
   @Input() isPassword!: boolean;
   @Input() label!: string;
   @Input() placeholder!: string;
   @Input() type: string = 'text';
   @Output() value: EventEmitter<string> = new EventEmitter<string>();
   @Output() inputEmitter: EventEmitter<string> = new EventEmitter<string>();
+  @Output() searchcrieria = new EventEmitter<String>();
 
   emitInput(input: string) {
     console.log('click ' + input)
@@ -22,7 +24,7 @@ export class InputComponent implements OnInit {
   }
 
   constructor() {
-    this.label = "login";
+
   }
 
   ngOnInit(): void {
