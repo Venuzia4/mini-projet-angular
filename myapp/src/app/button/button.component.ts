@@ -9,7 +9,6 @@ export class ButtonComponent {
 
   @Input() className!:string;
   @Input() logo!:string;
-  @Output()click:EventEmitter<null>= new EventEmitter<null>();
 
 
   onGoogleLoginClicked() {

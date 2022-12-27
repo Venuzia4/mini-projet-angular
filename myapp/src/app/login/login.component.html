@@ -5,13 +5,14 @@
     label="Login"
     type="text"
     placeholder="Email or phone number"
-    (value)="validateLogin($event)"
+    (value)="username=$event"
   ></app-input>
   <app-input
     *ngIf="isPassword"
     label="Password"
     type="password"
     placeholder=" Enter password"
+    (value)="password=$event"
   ></app-input>
   <div class="slide">
     <mat-slide-toggle [color]="color">Remember me</mat-slide-toggle>
